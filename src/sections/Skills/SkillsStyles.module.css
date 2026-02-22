@@ -2,46 +2,104 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding: 40px 10% 20px;
+}
 
-  span {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
+.skillGroups {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-  img {
-    width: 20px;
-  }
+.skillSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.skillSection h2 {
+  font-size: 1.25rem;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+  font-weight: 800;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.skillSection h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: var(--accent-color);
+  opacity: 0.5;
 }
 
 .skillList {
   display: flex;
-  justify-content: space-evenly;
-  align-self: center;
   flex-wrap: wrap;
-  row-gap: 40px;
-  max-width: 26ch;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
 }
 
-hr {
-  width: 100px;
-  height: 1px;
-  border: none;
-  background-color: var(--text-color);
-  margin: 30px auto;
+.skillList :global(.skillItem) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease;
+  width: 80px;
 }
 
-@media (width >= 800px) {
-  .skillList {
-    max-width: fit-content;
-    gap: 30px;
+.skillList :global(.skillItem):hover {
+  transform: translateY(-5px) scale(1.1);
+}
 
-    p {
-      font-size: 20px;
-    }
+.skillList :global(.skillItem) img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: all 0.3s ease;
+}
+
+.skillList :global(.skillItem):hover img {
+  filter: grayscale(0%) drop-shadow(0 0 10px rgba(59, 130, 246, 0.4));
+}
+
+.skillList p {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 6% 20px;
   }
 
-  hr {
-    width: 300px;
+  .skillGroups {
+    gap: 40px;
+  }
+
+  .group {
+    padding: 20px;
+  }
+
+  .skillList {
+    gap: 25px;
   }
 }

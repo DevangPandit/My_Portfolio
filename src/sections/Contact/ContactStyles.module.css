@@ -1,79 +1,97 @@
 .container {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  padding: 40px 10% 20px;
+  align-items: center;
+  justify-content: center;
 }
 
-form {
+.formContainer {
+  background: var(--card-bg);
+  padding: 60px;
+  border-radius: 30px;
+  box-shadow: var(--card-shadow);
+  width: 100%;
+  max-width: 700px;
+  transition: transform 0.3s ease;
+}
+
+.formContainer:hover {
+  transform: translateY(-5px);
+}
+
+.formContainer form {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-textarea,
-input:not([type='submit']) {
-  height: 50px;
-  padding-left: 16px;
-  width: 250px;
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
 }
 
-textarea {
-  padding-top: 16px;
-  resize: none;
-  height: 250px;
+.formGroup label {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-left: 5px;
 }
 
-input,
-textarea {
-  border-radius: 20px;
-  border: #888 1px solid;
-  box-sizing: border-box;
-  justify-self: center;
-  background-color: var(--background-color);
-  color: var(--form-text-color);
+.formGroup input,
+.formGroup textarea {
+  background: var(--input-bg);
+  border: 2px solid transparent;
+  padding: 18px 25px;
+  border-radius: 15px;
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
 }
 
-::placeholder {
-  color: var(--form-text-color);
+.formGroup input:focus,
+.formGroup textarea:focus {
+  background: var(--card-bg);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
 }
 
-input[type='submit'] {
-  background-color: var(--btn-color);
-  color: var(--btn-text-color);
+.btn {
+  background: var(--accent-color);
+  color: #fff;
   border: none;
-  border-radius: 20px;
-  width: 126px;
-  height: 50px;
-  font-size: 20px;
-  font-weight: bold;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
-  margin: auto;
+  padding: 20px;
+  border-radius: 16px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: 10px;
 }
 
-input[type='submit']:hover {
-  transform: scale(1.05);
+.btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgba(59, 130, 246, 0.4);
 }
 
-input[type='submit']:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+.btn:active {
+  transform: translateY(0);
 }
 
-@media (width >= 800px) {
-  textarea,
-  input:not([type='submit']) {
-    width: 600px;
-    font-size: 20px;
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 6% 20px;
   }
-  form {
-    gap: 40px;
-  }
-}
 
-@media (width >= 1400px) {
-  textarea,
-  input:not([type='submit']) {
-    width: 800px;
+  .formContainer {
+    padding: 40px 30px;
   }
 }
