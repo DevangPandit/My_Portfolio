@@ -5,7 +5,7 @@ function Contact() {
     <section id="contact" className={styles.container}>
       <h1 className="sectionTitle">Get In Touch</h1>
       <div className={styles.formContainer}>
-        <form action="https://formspree.io/f/xvgopvzk" method="POST">
+        <form action="https://formspree.io/f/xgolnjey" method="POST">
           <div className={styles.formGroup}>
             <label htmlFor="name">Full Name</label>
             <input
@@ -34,7 +34,7 @@ function Contact() {
               placeholder="How can I help you?"
               required></textarea>
           </div>
-          <input className={styles.btn} type="submit" value="Send Message" />
+          <input className={styles.btn} type="submit" value="Send Message"/>
         </form>
       </div>
     </section>
