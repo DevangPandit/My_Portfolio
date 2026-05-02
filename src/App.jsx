@@ -8,6 +8,7 @@ import About from './sections/About/About';
 import Projects from './sections/Projects/Projects';
 import Skills from './sections/Skills/Skills';
 import Experience from './sections/Experience/Experience';
+import Achievements from './sections/Achievements/Achievements';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Experience />
       <Projects />
       <Education />
+      <Achievements />
       <Contact />
       <Footer />
     </>

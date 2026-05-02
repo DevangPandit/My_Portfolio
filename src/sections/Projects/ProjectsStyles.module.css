@@ -145,4 +145,9 @@
   .container {
     padding: 40px 6% 20px;
   }
+
+  .imgContainer img {
+    max-width: 90px;
+    max-height: 90px;
+  }
 }
