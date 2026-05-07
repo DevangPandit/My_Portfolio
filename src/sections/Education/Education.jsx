@@ -9,7 +9,7 @@ function Education() {
                     <h2>Algonquin College</h2>
                     <p className={styles.degree}>Computer Programming and Analysis</p>
                     <p className={styles.date}>2024 - Present</p>
-                    <p className={styles.stats}>GPA: 3.6</p>
+                    <p className={styles.stats}>GPA: 3.82</p>
                 </div>
                 <div className={styles.educationItem}>
                     <h2>Ambe Vidyalaya</h2>
