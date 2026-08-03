@@ -3,6 +3,7 @@ import ProjectCard from '../../common/ProjectCard';
 import globeTraviaLogo from '../../assets/globe-travia-logo.png';
 import luminaraLogo from '../../assets/luminara-logo.png';
 import spendsmartLogo from '../../assets/spendsmart-logo.svg';
+import drovLogo from '../../assets/drov-logo.png';
 
 function Projects() {
   const tech = {
@@ -31,12 +32,27 @@ function Projects() {
     androidstudio: { name: 'Android Studio', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/androidstudio/androidstudio-original.svg' },
     restapi: { name: 'REST APIs', icon: 'https://img.icons8.com/color/48/null/api.png' },
     sqlite: { name: 'SQLite', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg' },
+    postgresql: { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+    tailwind: { name: 'Tailwind', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+    docker: { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+    expo: { name: 'Expo', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/expo/expo-original.svg' },
+    reactnative: { name: 'React Native', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+    stripe: { name: 'Stripe', icon: 'https://www.vectorlogo.zone/logos/stripe/stripe-icon.svg' },
   };
 
   return (
     <section id="projects" className={styles.container}>
       <h1 className="sectionTitle">Featured Projects</h1>
       <div className={styles.projectsContainer}>
+        <ProjectCard
+          src={drovLogo}
+          link=""
+          github=""
+          h3="Drov"
+          p="Bike & E-Bike Repair Platform"
+          description="A full-stack repair marketplace connecting riders with local shops — booking, real-time tracking, shop ops, and payments across web and mobile."
+          technologies={[tech.react, tech.nodejs, tech.express, tech.postgresql, tech.expo, tech.docker, tech.stripe]}
+        />
         <ProjectCard
           src={luminaraLogo}
           link="https://luminara.up.railway.app"
